@@ -81,12 +81,35 @@
              <include android:id="@+id/shimmerMeal"
                 layout="@layout/item_view_pager_header_shimmer" />
 
-            <!-- TODO 5 Add <TextView> for title of Category list -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_titleCategory"
+                android:text="@string/meal_categories"
+                android:textSize="19sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@id/vp_header"/>
 
-            <!-- TODO 6 Add <RecyclerView> for display the category list -->
-            <!-- TODO 7 Delete comment to <include below -->
-            <!-- <include android:id="@+id/shimmerCategory"
-                layout="@layout/item_recycler_category_shimmer" />-->
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recycler_category"
+                android:scrollbars="none"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv_titleCategory"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="50dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            
+            <include android:id="@+id/shimmerCategory"
+                layout="@layout/item_recycler_category_shimmer" />
             <TextView
                 android:padding="10dp"
                 android:gravity="center"
